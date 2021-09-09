@@ -1,29 +1,42 @@
-import React, { useState } from 'react'
+import React from 'react';
 import './index.css';
+import { CheckCircleIcon } from '@heroicons/react/solid';
 
-function AddingNumbers() {
-    const [num1, setNum1] = useState(0)
-    const [num2, setNum2] = useState(0)
-    const [result, setResult] = useState(0)
+function Todolist() {
     return (
-        <div className='container'>
-            <h1>Adding Two Numbers</h1>
-            <div className='form'>
-                <input
-                    type='number'
-                    value={num1}
-                    onChange={(e) => setNum1(e.target.value)}
-                />
-                <input
-                    type='number'
-                    value={num2}
-                    onChange={(e) => setNum2(e.target.value)}
-                />
+        <div className='todo-container'>
+            <div className='box'>
+                <div className='header'>
+                    <div className='date'>
+                        <h1>12</h1>
+                        <p>jan</p>
+                        <span>2016</span>
+                    </div>
+                    <div className='week'>
+                        <h3>tuesday</h3>
+                    </div>
+                </div>
+                <div className='body'>
+                    <div className='todo'>
+                        <span>Buy robux</span>
+                        <CheckCircleIcon />
+                    </div>
+                    <div className='todo'>
+                        <span>Get homework done</span>
+                        <CheckCircleIcon />
+                    </div>
+                    <div className='todo'>
+                        <span>Use google</span>
+                        <CheckCircleIcon />
+                    </div>
+                </div>
+                <div className='footer'>
+                    <input type='text' />
+                    <button>Submit</button>
+                </div>
             </div>
-            <button onClick={() => setResult(+num1 + +num2)}>Add Them!</button>
-            <p>{result}</p>
         </div>
-    )
+    );
 }
 
-export default AddingNumbers;
+export default Todolist;
