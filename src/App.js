@@ -1,10 +1,10 @@
 import './App.css';
-import AddingNumbers from './components/AddingNumbers'
+import Todolist from './components/AddingNumbers'
 
 function App() {
   return (
     <div className='App'>
-      <AddingNumbers />
+      <Todolist />
     </div>
   );
 }
